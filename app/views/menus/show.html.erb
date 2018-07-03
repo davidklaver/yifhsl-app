@@ -1,0 +1,15 @@
+<div class="main menuShowContainer">
+	<header class="menuHeader">
+	<div class="overlay"></div>
+		<h1><%= @menu.title %></h1>
+	</header>
+	
+	<!-- <div class="iframeDiv"> -->
+		<!-- <iframe src="<%= @menu.image.url %>" frameborder="0" allowfullscreen></iframe> -->
+		<%= image_tag @menu.image.url, :class => "menuImage" %>
+	<!-- </div>  -->
+	<!-- <object class="iframeDiv" data="<%= @menu.image.url %>" type="application/pdf">
+    <embed class="iframeDiv" src="<%= @menu.image.url %>" type="application/pdf" />
+</object> -->
+</div>
+

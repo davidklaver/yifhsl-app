@@ -1,0 +1,109 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.eventContainerDiv {
+	/*background-color: rgba(0,0,0,.7);*/
+	padding-top: 100px;
+	margin-top: 0 !important;
+}
+
+.eventsContainer, .showeventContainer {
+	
+	padding-bottom: 50px;
+	h1, h2, p {
+		color: white;
+	}
+	h1 {
+
+		/*font-family: "Coming Soon";*/
+		/*text-decoration: underline;*/
+	}
+}
+
+.eventsContainer {
+	width: 400px !important;
+	display: block;
+}
+
+.eventImage {
+	float: left;
+	padding-right: 10px;
+	width: 100px;
+}
+
+
+.youtubeThumb {
+	width: 100px;
+}
+
+.eventContainer {
+	margin: 15px auto;
+	border: 2px solid gray;
+	box-shadow: 15px 15px 15px rgba(0,0,0,.9);
+	border-radius: 5px;
+	padding: 10px;
+	height: 150px;
+	/*background-color: var(--lightgreen);*/
+	background-color: white;
+	transition: .25s;
+	p {
+		margin: 0;
+		color: var(--darkgreen);
+		font-size: 16px;
+	}
+
+	&:hover {
+		box-shadow: 5px 5px 5px rgba(0,0,0,.9);
+		background-color: var(--darkgreen);
+
+		/*box-shadow: none;*/
+		cursor: pointer;
+
+		p {
+			color: white;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+}
+
+.showeventContainer {
+	p {
+		margin: 15px;
+		text-align: center;
+		font-size: 16px;
+
+	}
+
+	img {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid lightgray;
+	}
+}
+
+.youtubeVideoDiv {
+	background-color: white;
+	width: 700px;
+	height: 410px;
+	margin: 50px auto;
+	padding: 20px;
+	border: 1px solid gray;
+}
+
+.youtubeVideo {
+	height: 100%;
+	width: 100%;
+}
+
+@media(max-width: 768px) {
+	.youtubeVideoDiv {
+		padding: 5px;
+		width: 92vw;
+		height: 60vw;
+	}
+}

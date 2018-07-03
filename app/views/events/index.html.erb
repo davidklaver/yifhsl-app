@@ -1,0 +1,45 @@
+
+<div class=" eventContainerDiv">
+	<!-- <header class="eventsHeader">
+	<h1>events</h1>
+</header> -->
+	<div class="row">
+    <div class="col-xs-12 col-md-8 showeventContainer">
+    	<h1>Most Recent event:</h1>
+			<!-- <h2><%= @events.last.title %></h2> -->
+			<p></p>
+			<% if @events.last.image_file_name != nil %>
+				<div><%= image_tag @events.last.image.url %></div>
+			<% else %>
+				<div class="youtubeVideoDiv">
+					<iframe src="https://www.youtube.com/embed/<%= @events.last.youtube_id %>" frameborder="0" allow="autoplay; encrypted-media" class="youtubeVideo" allowfullscreen></iframe>
+				</div>
+			<% end %>
+		</div>
+		<div class="col-xs-12 col-md-3 eventsContainer">
+			<h1>All events</h1>
+			<% @events.each do |event| %>
+				<div class="eventContainer">
+					<a href="/events/<%= event.id %>">
+						<% if event.image_file_name != nil %>
+							<div><%= image_tag event.image.url(:thumb), :class => "eventImage"  %></div>
+						<% else %>
+						<!-- <a href="https://www.youtube.com/watch?v=<%= event.youtube_id %>" target="blank"> -->
+							<%= image_tag "https://img.youtube.com/vi/#{event.youtube_id}/2.jpg", :class => "eventImage youtubeThumb" %>
+							<!-- <div><%= image_tag event.image.url %></div> -->
+							
+						<% end %>
+						<p>
+							<%= event.title %>
+							<br>
+							
+						</p>
+					</a>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+
+			
