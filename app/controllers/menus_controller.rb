@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-	before_action :authenticate_user!, only: [:create, :update, :destroy, :new, :edit]
+	# before_action :authenticate_user!, only: [:create, :update, :destroy, :new, :edit]
 
 	def show
 		@menu = Menu.last
