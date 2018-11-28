@@ -1,39 +1,45 @@
 
-  
-  <div class="main app form" id="main"><!-- Main Section-->
+  <!-- Main Section-->
     <div class="hero-section" >
-      <%= image_tag "bg3.jpg", :class => "homePic wow fadeInRight" %>
-    	<div class="titleBlock wow fadeInLeft" data-wow-duration="1.5s">
     		<div class="overlay"></div>
+      <%= image_tag "bg3.jpg", :class => "homePic wow fadeInRight" %>
+      <div class="titleBlock wow fadeInLeft" data-wow-duration="1.5s">
     		<%= image_tag "home_heart.png", :class => "homeHeartPic" %>
-    		<div class="hero-content text-center">  
+    		<div class="text-center">  
           <h2 class="smallHeading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="2s">Young Israel of Forest Hills</h2>
           <h1 class="smallHeading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="2s">Senior League</h1>
-          <h1 class="wow fadeInUp bigHeading" data-wow-delay=".5s" data-wow-duration="2s">The Center With a Heart</h1>
-          <a href="#about" class="btn btn-action wow fadeIn" data-wow-delay="1.5s" data-wow-duration="2s">Who We Are</a> 
-        </div>
-    		
+          
+        </div>	
     	</div>
-      <div class="container main-content wow fadeIn" data-wow-delay=".1s">
+      <div class="container main-content wow fadeIn" data-wow-delay=".1s" id="main-content">
         <!-- <div class="col-md-12"> -->
           <h2>Young Israel of Forest Hills</h2>
-    			<h1>Senior League</h1>
+    			<h1 class="scripty">Senior League</h1>
+          <a href="#about" class="btn btn-action wow fadeIn whoBtn" data-wow-delay=".5s" data-wow-duration="2s">Who We Are</a> 
         <!-- </div> -->
       </div>
     </div>
     <!-- Classes Section -->
     <div class="pitch text-center" id="about">
-      <div class="container aboutContainer">
+      <div class="container-fluid aboutContainer">
       	
-        <div class="col-md-12">
+        <div class="col-md-12 innerAbout">
           <div class="col-md-4 wow fadeInDown" data-wow-delay="0.2s">
             <div class="pitch-icon"> 
             	<i class="ion-ios-heart"></i> 
             </div>
             <div class="pitch-content">
               <h1>Warm Staff</h1>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+              <p>One of the main focuses at our Center is that we are a home away from home. The staff here is warm and caring, and we consider ourselves the extended family of all our members!</p>
+            </div>
+          </div>
+          <div class="col-md-4 wow fadeInDown" data-wow-delay="0.2s">
+            <div class="pitch-icon"> 
+              <i class="ion-ios-calendar"></i> 
+            </div>
+            <div class="pitch-content">
+              <h1>Exciting Programs &amp; Activities</h1>
+              <p>We offer daily exercise classes, nutrition & health lectures, art, recreational activities, movies, monthly celebrations, and more! We're always attuned to the needs and requests of our members, using them to make our schedule fantastic! </p>
             </div>
           </div>
           <div class="col-md-4 wow fadeInDown" data-wow-delay="0.2s">
@@ -41,17 +47,8 @@
             	<i class="ion-ios-home"></i> 
             </div>
             <div class="pitch-content">
-              <h1>Great Facilities</h1>
-              <p> Aliquam vel euismod elit, sed suscipit est. Sed tincidunt venenatis ligula ac luctus. Fusce egestas volutpat mi sed pellentesque. </p>
-            </div>
-          </div>
-          <div class="col-md-4 wow fadeInDown" data-wow-delay="0.2s">
-            <div class="pitch-icon"> 
-            	<i class="ion-ios-calendar"></i> 
-            </div>
-            <div class="pitch-content">
-              <h1>Exciting Activities &amp; Events</h1>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim sint occaecat cupidatat non proident, id est laborum. </p>
+              <h1>Promoting an Independent Lifestyle for Seniors</h1>
+              <p>All of our programs and activities support an independent lifestyle, enabling our members to live in the comfort of their own homes as long as possible. We have members as young as 60 and members who are 90, still driving and very active community members.</p>
             </div>
           </div>
         </div>

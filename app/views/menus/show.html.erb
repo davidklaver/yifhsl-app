@@ -7,6 +7,17 @@
 	<!-- <div class="iframeDiv"> -->
 		<!-- <iframe src="<%= @menu.image.url %>" frameborder="0" allowfullscreen></iframe> -->
 		<%= image_tag @menu.image.url, :class => "menuImage" %>
+		<div class="container">
+			<div class="row">
+				<div class="catererLogoDiv col-md-3">
+		<p class="catererP">Catering provided by:</p>
+					<a href="http://www.diplomatcaterer.com/catering-about-us" target="_blank"><%= image_tag 'caterer_logo.png', :class => "catererLogo" %></a>
+				</div>
+				<div class="col-md-9">
+					<p class="dcP">Diplomat Caterer aims to provide hospitals, medical facilities, and the members of the senior community with excellent kosher catering services.</p>
+				</div>
+			</div>
+		</div>
 	<!-- </div>  -->
 	<!-- <object class="iframeDiv" data="<%= @menu.image.url %>" type="application/pdf">
     <embed class="iframeDiv" src="<%= @menu.image.url %>" type="application/pdf" />

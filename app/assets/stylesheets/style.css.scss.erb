@@ -185,6 +185,7 @@ html, body {
 
 
 .navbar {
+	z-index: 1000;
 	font-size: 12px;
   font-family: 'Varela Round', sans-serif;
 	font-weight: bold;
@@ -228,7 +229,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2
 }
 
 .navLogo {
-	width: 18%;
+	width: 25%;
 	/*display: inline;*/
 	/*visibility: hidden;*/
 	margin-left: 50px;
@@ -457,16 +458,18 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2
 }
 
 .titleBlock {
-	position: absolute;
-	top: 0;
-	padding-top: 15vh;
-	width: 30vw;
+	display: none;
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*padding-top: 15vh;*/
+	/*width: 30vw;*/
 	min-width: 350px;
-	height: 100vh;
+	/*height: 100vh;*/
 	/*background-color: rgba(255,255,255,.7);*/
 	/*background-color: #079;*/
 	/*background-color: rgba(0, 119, 153,.7);*/
 	.homeHeartPic {
+		display: none;
 		width: 70%;
 		margin: 50px 15%;
 		position: relative;
@@ -492,9 +495,12 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2
 }
 
 .overlay {
-		width: 100%;
-		height: 100%;
-		background-color: rgba(255,255,255,.3);
+	position: absolute;
+	top: 0;
+	z-index: 10;
+		width: 100vw;
+		height: 85vh;
+		background-color: rgba(0,0,0,.1);
 	}
 
 @media(min-width: 768px) {
@@ -515,11 +521,11 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2
 		margin-left: 25% !important;
 	}
 	.bigHeading {
-		display: none;
+		/*display: none;*/
 	}
 	.titleBlock {
 		width: 100vw;
-		height: 100vh;
+		/*height: 100vh;*/
 		top: 0;
 		padding-top: 15vh;
 		h2 {
@@ -532,18 +538,24 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2
 		}
 	}
 
-	.main-content {
+/*	.main-content {
+
 		display: none;
-	}
+	}*/
+}
+
+#main-content {
+	position: relative;
+	z-index: 500;
 }
 
 .homePic {
 	/*display: none;*/
 	position: absolute;
-	right: -2vw;
-	width: 75vw;
+	top: -2vw;
+	width: 100vw;
 	min-width: 1000px;
-	filter: blur(7px);
+	/*filter: blur(7px);*/
 	padding-bottom: 0;
 	margin-bottom: 0;
 
@@ -566,7 +578,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2
 	color: #262626;
 	line-height: 1.2;
 	letter-spacing: -1px;
-	margin: 0 0 20px 0;
+	margin: 200px 0 20px 0;
 }
 
 .hero-content p {
@@ -595,8 +607,25 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2
  -moz-transition: 200ms;
  -o-transition: 200ms;
  transition: 200ms;
- position: relative;
-		z-index: 1000;
+ /*position: relative;*/
+		/*z-index: 1000;*/
+		/*top: 60vh;*/
+}
+
+.scripty {
+	font-size: 180px !important;
+	font-family: 'Dancing Script', cursive;
+}
+
+.whoBtn {
+	background-color: steelblue;
+	width: 180px;
+	margin: 40px auto;
+	border-radius: 50px;
+	box-shadow: inset 5px 5px 5px #333, inset -5px -5px 5px #333;
+	border: none;
+	display: block;
+	/*margin: auto;*/
 }
 
 .btn-action:hover, .btn-action:focus,
@@ -622,10 +651,10 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2
 }
 
 .main-content {
-	position: absolute;
-	z-index: 1000;
-	width: 50%;
-	margin: 10vh 0 0 40%;
+	/*position: absolute;*/
+	/*z-index: 1000;*/
+	width: 100%;
+	margin-top: 5vh;
 	h1, h2 {
 		text-align: center;
 		/*color: white;*/
@@ -641,6 +670,17 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2
 		font-size: 150px;
 		color: #fff;
 		text-shadow: 2px 2px 2px #049;
+	}
+}
+
+@media(max-width: 767px) {
+	.hero-section {
+		height: 80vh;
+		/*display: none;*/
+	}
+
+	.main-content h1 {
+		font-size: 72px !important;
 	}
 }
 
@@ -1208,7 +1248,14 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 }
 .about {
 	padding: 100px 0 100px 0;
-	background: #F1F1F1;
+	background: white;
+	position: relative;
+	z-index: 500;
+}
+
+.innerAbout {
+	padding-top: 50px;
+	background-color: white;
 }
 
 .about-content {
@@ -1665,7 +1712,9 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 	margin: 10px 0 0 0;
 }
 
-
+.aboutContainer {
+	background-color: white;
+}
 /*-------------------------------------------------------
 ------------- Split Features Section Styling ------------
 --------------------------------------------------------*/
