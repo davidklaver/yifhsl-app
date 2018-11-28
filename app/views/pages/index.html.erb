@@ -284,11 +284,18 @@
         </div>
       </div>
     </div> -->
+<!--     <img src="https://maps.googleapis.com/maps/api/staticmap?lat=40.72167&long=-73.85173
+
+&zoom=18&size=600x300&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284
+&key=AIzaSyByiU4ve8j1yLfVWl9i6gqPkB9wqzomcWQ"> -->
+    
 <script>
   function initMap() {
-    var store = {lat: 41.1067899, lng: -74.0644022};
+    var store = {lat: 40.72167, lng: -73.85173};
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
+      zoom: 16,
       center: store
     });
     var marker = new google.maps.Marker({
@@ -297,5 +304,5 @@
     });
   }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRldDEOdDHkk3uU7bwN9FvfSPF6g7P7LQ&callback=initMap">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByiU4ve8j1yLfVWl9i6gqPkB9wqzomcWQ&callback=initMap">
 </script>
