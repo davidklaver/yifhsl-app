@@ -558,8 +558,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	/*display: none;*/
 	position: absolute;
 	top: -2vw;
-	width: 100vw;
-	min-width: 1000px;
+	min-width: 100vw;
+	min-height: 100vh;
+	/*min-width: 1000px;*/
 	/*filter: blur(7px);*/
 	padding-bottom: 0;
 	margin-bottom: 0;
@@ -1311,8 +1312,7 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 -----------------------------------------------------*/
 
 .aboutDiv {
-
-	padding: 100px 0 0 0;
+	margin: 100px 0 0 0;
 	/*padding-top: 200px;*/
 	background-color: white !important;
 }
@@ -1651,7 +1651,14 @@ input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placehold
 .img-circle {
 	width: 200px !important;
 	height: 200px !important;
+	margin-top: 100px;
 	border: 4px solid #d77;
+}
+
+@media(max-width: 767px) {
+	.img-circle {
+		margin-top: 0;
+	}
 }
 
 .app-features {
@@ -2379,10 +2386,10 @@ p.dkDesign {
 	}
 
 	.hero-section {
-		padding: 150px 0 100px 0;
+		padding-top: 150px;
 	}
 
-	.form .hero-section {
+	.hero-section {
 		/*padding: 13% 0;*/
 		height: 100vh;
 	}
