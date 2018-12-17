@@ -6,7 +6,8 @@ class EventsController < ApplicationController
 		@event = Event.last
 	end
 	def show
-		@event = Event.last
+		@events = Event.all
+		@event = Event.find_by(id: params[:id])
 	end
 
 	def new

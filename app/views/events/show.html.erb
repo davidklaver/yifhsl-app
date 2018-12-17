@@ -1,0 +1,40 @@
+<div class="container-fluid eventContainerDiv">
+  <header class="menuHeader">
+  <!-- <div class="overlay"></div> -->
+    <h1>Events &amp; Activities </h1>
+  </header>
+  <div class="row">
+    <div class="showeventContainer col-xs-12 col-md-8">
+      <!-- <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=http://files.constantcontact.com/0774347d301/fce41f18-f119-4647-8959-32e0d5df84f8.pdf?ver=1524063673000" class="pdf"> -->
+      <h2><%= @event.title %></h2>
+			<p><%= @event.pretty_time %></p>
+			<% if @event.image_file_name != nil %>
+				<div><%= image_tag @event.image.url %></div>
+			<% else %>
+				<div class="youtubeVideoDiv">
+					<iframe src="https://www.youtube.com/embed/<%= @event.youtube_id %>" frameborder="0" allow="autoplay; encrypted-media" class="youtubeVideo" allowfullscreen></iframe>
+				</div>
+			<% end %>
+    </div>
+    <div class="col-xs-12 col-md-3 eventsContainer">
+      <h1>News & Events</h1>
+      <% @events.each do |event| %>
+        <div class="eventContainer">
+          <a href="/events/<%= event.id %>">
+            <% if event.image_file_name != nil %>
+                <div><%= image_tag event.image.url(:thumb), :class => "eventImage" %></div>
+            <% else %>
+            <!-- <a href="https://www.youtube.com/watch?v=<%= event.youtube_id %>" target="blank"> -->
+              <%= image_tag "https://img.youtube.com/vi/#{event.youtube_id}/2.jpg", :class => "eventImage youtubeThumb" %>
+            <% end %>
+            <p>
+              <%= event.title %>
+              <br>
+              <%= event.pretty_time %>
+            </p>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

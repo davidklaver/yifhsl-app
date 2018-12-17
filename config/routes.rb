@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 	get '/' => 'pages#index'
+	get '/contact' => 'pages#contact'
 
 	get '/menus/new' => 'menus#new'
 	get '/menus' => 'menus#show'
@@ -8,6 +9,8 @@ Rails.application.routes.draw do
 	get '/events/new' => 'events#new'
 	get '/events' => 'events#index'
 	post '/events' => 'events#create'
+	get '/events/:id' => 'events#show'
+
 
 	get "/signup" => "users#new"
   post "/users" => "users#create"
