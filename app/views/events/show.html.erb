@@ -5,8 +5,8 @@
   </header>
   <div class="row">
     <div class="showeventContainer col-xs-12 col-md-8">
-      <!-- <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=http://files.constantcontact.com/0774347d301/fce41f18-f119-4647-8959-32e0d5df84f8.pdf?ver=1524063673000" class="pdf"> -->
-      <h2><%= @event.title %></h2>
+      
+      <!-- <h2><%= @event.title %></h2> -->
 			<p><%= @event.pretty_time %></p>
 			<% if @event.image_file_name != nil %>
 				<div><%= image_tag @event.image.url %></div>

@@ -9,6 +9,9 @@
 	.menuHeader {
 		padding: 10px 20px;
 	}
+	h4 {
+		text-align: center;
+	}
 }
 
 @media(max-width: 767px) {
@@ -52,7 +55,7 @@
 	margin: 15px auto;
 	border: 2px solid gray;
 	box-shadow: 15px 15px 15px rgba(0,0,0,.9);
-	border-radius: 5px;
+	border-radius: 25px;
 	padding: 10px;
 	height: 150px;
 	background-color: #cef;
@@ -61,7 +64,8 @@
 	p {
 		margin: 0;
 		color: darkblue;
-		font-size: 16px;
+		font-size: 20px;
+		font-weight: bold;
 	}
 
 	&:hover {

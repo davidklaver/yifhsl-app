@@ -4,6 +4,8 @@
 	<!-- <div class="overlay"></div> -->
 		<h1>Events &amp; Activities </h1>
 	</header>
+<!-- 	<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=http://files.constantcontact.com/0774347d301/fce41f18-f119-4647-8959-32e0d5df84f8.pdf?ver=1524063673000" class="pdf"> -->
+	<h4><a href="https://drive.google.com/viewerng/viewer?embedded=true&url=http://files.constantcontact.com/0774347d301/fce41f18-f119-4647-8959-32e0d5df84f8.pdf?ver=1524063673000"" target="_blank">Click HERE to view our monthly Newscoop!</a></h4>
 	<!-- <header class="eventsHeader">
 	<h1>events</h1>
 </header> -->
@@ -11,32 +13,17 @@
     <div class="col-xs-12 col-md-8 showeventContainer">
     	<h1>Most Recent event:</h1>
 			<!-- <h2><%= @events.last.title %></h2> -->
-			<p></p>
-			<% if @events.last.image_file_name != nil %>
-				<div><%= image_tag @events.last.image.url %></div>
-			<% else %>
-				<div class="youtubeVideoDiv">
-					<iframe src="https://www.youtube.com/embed/<%= @events.last.youtube_id %>" frameborder="0" allow="autoplay; encrypted-media" class="youtubeVideo" allowfullscreen></iframe>
-				</div>
-			<% end %>
+				<div><%= image_tag @events.last.image.url %></div>				
 		</div>
 		<div class="col-xs-12 col-md-3 eventsContainer">
 			<h1>All events</h1>
 			<% @events.each do |event| %>
 				<div class="eventContainer">
 					<a href="/events/<%= event.id %>">
-						<% if event.image_file_name != nil %>
-							<div><%= image_tag event.image.url(:thumb), :class => "eventImage"  %></div>
-						<% else %>
-						<!-- <a href="https://www.youtube.com/watch?v=<%= event.youtube_id %>" target="blank"> -->
-							<%= image_tag "https://img.youtube.com/vi/#{event.youtube_id}/2.jpg", :class => "eventImage youtubeThumb" %>
-							<!-- <div><%= image_tag event.image.url %></div> -->
-							
-						<% end %>
+						<div><%= image_tag event.image.url(:thumb), :class => "eventImage"  %></div>
 						<p>
 							<%= event.title %>
 							<br>
-							
 						</p>
 					</a>
 				</div>
